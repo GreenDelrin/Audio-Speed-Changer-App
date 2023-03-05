@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <title>Speed Changer/Looper</title>
+</head>
+
+<body>
+    <header>
+        <a id="homeBtn" href="../index.html"><img src="../home.png"></a>
+    </header>
+    <div class="container">
+        <!-- Add a button to trigger the file selection -->
+        <input type="file" id="file">
+        </br>
+        <!-- Wavesurfer -->
+        <p>Loop A/B</p>
+        <div id="looper">
+            <button id="loopA">A</button>
+            <button id="loopClear">Clear</button>
+            <button id="loopB">B</button>
+        </div>
+        <div id="timeline">
+            <p id="letterA">|A</p>
+            <p id="letterB">B|</p>
+        </div>
+        <div id="waveform"></div>
+        <audio id="audio" src="file.wav"></audio>
+        <div id="controls">
+
+            <button id="restart">Restart</button>
+            <button id="play">Play</button>
+            <button id="preLoop">Pre Loop</button>
+        </div>
+        <!-- Add a slider to adjust the speed -->
+        <div class="slider-container">
+            <p id="audiospeed">Playback Speed: 100%</p>
+            <input id="speed-slider" type="range" min="50" max="150" value="100">
+        </div>
+        <!-- Add a slider to adjust Pitch -->
+        <div class="pitch-container">
+            <label for="speed-slider">Pitch:</label>
+            <div id="pitch"></div>
+            <input type="range" min="0" max="100" value="50" class="slider" id="pitch-slider">
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+
+
+</body>
+
+
+</html>
